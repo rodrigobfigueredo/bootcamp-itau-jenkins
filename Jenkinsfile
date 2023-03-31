@@ -6,6 +6,14 @@ pipeline {
                 branch "jenkins"
             }
             steps {
+                sh "echo 'Iniciando pipeline'"
+            }
+        }	
+        stage('Listar arquivos do repositorio') {
+            when {
+                branch "jenkins"
+            }
+            steps {
                 sh "ls -la"
             }
         }
